@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComicController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,10 +21,9 @@ Route::get('/characters', function () {
     return view('characters');
 })->name('characters');
 
-Route::get('/comics', function () {
-    $comics = config('comics');
-    return view('comics', compact('comics'));
-})->name('comics');
+// rotte per la risorsa Comic 
+Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
+Route::get('/comics/{id}', [ComicController::class, 'show'])->name('comics.show');
 
 Route::get('/movies', function () {
     return view('movies');

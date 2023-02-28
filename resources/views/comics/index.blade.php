@@ -10,9 +10,9 @@
                 @foreach($comics as $comic)
                 <div class="product-card">
                     <figure>
-                        <a href="#"><img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}"></a>
+                        <a href="#"><img src="{{ $comic->thumb }}" alt="{{ $comic->title }}"></a>
                     </figure>
-                    <figcaption>{{ $comic['title'] }}</figcaption>
+                    <figcaption>{{ $comic->title }}</figcaption>
                 </div>
                 @endforeach
                 <a class="load-more" href="#">Load More</a>

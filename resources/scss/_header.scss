@@ -1,0 +1,59 @@
+header {
+    .bg-blue {
+        background-color: $darkblue;
+    }
+
+    .links-header {
+        display: flex;
+        justify-content: flex-end;
+        padding: 3px 0;
+
+        a {
+            color: white;
+            font-size: 0.8rem;
+            margin-left: 15px;
+        }
+    }
+
+    // header navbar
+    .navbar {
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        figure {
+            width: 85px;
+            height: 85px;
+
+            a {
+                padding: 0;
+            }
+        }
+
+        ul {
+            display: flex;
+
+            a {
+                padding: 0 15px;
+                display: block;
+                color: black;
+                font-weight: bold;
+
+                &.active,
+                &:hover {
+                    color: $darkblue;
+                }
+            }
+        }
+
+        .search {
+            padding: 10px;
+        }
+    }
+
+    .jumbo {
+        height: 400px;
+        background-image: url(../img/jumbotron.jpg);
+    }
+}

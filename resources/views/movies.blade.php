@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'movies')
+@section('title', 'Movies')
 @section('content')
     <h1>movies</h1>
 @endsection

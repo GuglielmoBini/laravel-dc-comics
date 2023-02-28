@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'comics')
+@section('title', 'Comics')
 @section('content')
 <main>
     <!-- main-content -->

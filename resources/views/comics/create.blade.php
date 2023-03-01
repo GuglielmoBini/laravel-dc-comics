@@ -5,13 +5,14 @@
 @section('content')
     <section id="create-comic">
         <div class="container py-5">
-            <div class="card">
+            <div class="card p-4">
                 <div class="card-title d-flex align-items-center justify-content-between my-3">
                     <h1 class="mx-3">Crea il tuo fumetto</h1>
                     <a href="{{ route('comics.index') }}" class="btn btn-primary mx-3">Indietro</a>
                 </div>
                 <div class="card-body">
-                    <form action="">
+                    <form method="POST" action="{{ route('comics.store') }}">
+                        @csrf
                         <div class="row">
                             <div class="col-6">
                                 <div class="mb-3">
@@ -71,6 +72,9 @@
                                     <input type="text" class="form-control" id="price" name="price">
                                   </div>
                             </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-success mt-4 w-25">INVIA</button>
                         </div>
                     </form>
                 </div>

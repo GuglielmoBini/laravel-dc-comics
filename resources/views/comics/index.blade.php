@@ -17,7 +17,7 @@
                 @endforeach
                 <div class="w-100 my-4 d-flex justify-content-around">
                     <a class="btn-blue" href="#">Load More</a>
-                    <a class="btn-blue" href="{{ route('comics.create') }}">Crea il tuo fumetto</a>
+                    <a class="btn-blue" href="{{ route('comics.create') }}">Create your Comic</a>
                 </div>
             </div>
         </div>

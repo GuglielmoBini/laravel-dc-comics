@@ -1,3 +1,8 @@
 #create-comic {
     background-color: $darkblue;
+
+    .card {
+        border-radius: 25px;
+        box-shadow: 0 0 20px 5px $darkergray;
+    }
 }

@@ -15,7 +15,10 @@
                     <figcaption>{{ $comic->title }}</figcaption>
                 </div>
                 @endforeach
-                <a class="btn-blue" href="#">Load More</a>
+                <div class="w-100 my-4 d-flex justify-content-around">
+                    <a class="btn-blue" href="#">Load More</a>
+                    <a class="btn-blue" href="{{ route('comics.create') }}">Crea il tuo fumetto</a>
+                </div>
             </div>
         </div>
     </section>

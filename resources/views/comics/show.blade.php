@@ -6,22 +6,22 @@
 <section id="single-comic">
     <div class="bg-blue"></div>
     <div class="container">
-        <div class="d-flex-between">
+        <div class="d-flex justify-content-between align-items-center">
             <h1>{{ $comic->title }}</h1>
             <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
         </div>
-        <p>{{ $comic->description }}</p>
+        <p>{!! $comic->description !!}</p>
 
-        <ul>
+        <ul class="p-0">
             <h3>Talent</h3>
-            <ul>
+            <ul class="px-3">
                 <strong>Written by:</strong>
                 <li>{{ $comic->writers }}</li>
                 <strong>Art by:</strong>
                 <li>{{ $comic->artists }}</li>
             </ul>
             <h3>Specs</h3>
-            <ul>
+            <ul class="px-3">
                 <li><strong>Series: </strong>{{ $comic->series }}</li>
                 <li><strong>U.S. Price: </strong>${{ $comic->price }}</li>
                 <li><strong>On Sale Date: </strong>{{ $comic->sale_date }}</li>

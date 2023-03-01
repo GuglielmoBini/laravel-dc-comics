@@ -1,14 +1,8 @@
 header {
     .bg-blue {
         background-color: $darkblue;
-    }
 
-    .links-header {
-        display: flex;
-        justify-content: flex-end;
-        padding: 3px 0;
-
-        a {
+        .white-links {
             color: white;
             font-size: 0.8rem;
             margin-left: 15px;
@@ -18,9 +12,6 @@ header {
     // header navbar
     .navbar {
         height: 120px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
 
         figure {
             width: 85px;
@@ -31,19 +22,15 @@ header {
             }
         }
 
-        ul {
-            display: flex;
+        ul a {
+            padding: 0 15px;
+            display: block;
+            color: black;
+            font-weight: bold;
 
-            a {
-                padding: 0 15px;
-                display: block;
-                color: black;
-                font-weight: bold;
-
-                &.active,
-                &:hover {
-                    color: $darkblue;
-                }
+            &.active,
+            &:hover {
+                color: $darkblue;
             }
         }
 

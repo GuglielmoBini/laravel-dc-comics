@@ -5,7 +5,7 @@
     <!-- main-content -->
     <section id="comics">
         <div class="container">
-            <h3>Current Series</h3>
+            <h4>Current Series</h4>
             <div class="card-container">
                 @foreach($comics as $comic)
                 <div class="comic-card">

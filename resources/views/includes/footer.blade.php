@@ -2,10 +2,10 @@
     <!-- footer-top -->
     <section id="footer-top">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-between">
                 <!-- links -->
-                <div class="col">
-                    <div>
+                <div class="col-6 d-flex">
+                    <div class="me-5">
                         <h4>DC COMICS</h4>
                         <ul>
                             <li><a href="#">Characters</a></li>
@@ -24,7 +24,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div>
+                    <div class="me-5">
                         <h4>DC</h4>
                         <ul>
                             <li><a href="#">Terms Of Use</a></li>
@@ -40,7 +40,7 @@
                             <li><a href="#">Contact Us</a></li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="me-5">
                         <h4>SITES</h4>
                         <ul>
                             <li><a href="#">DC</a></li>
@@ -52,8 +52,8 @@
                     </div>
                 </div>
                 <!-- logo big -->
-                <div class="col">
-                    <figure>
+                <div class="col-5">
+                    <figure class="m-0">
                         <img src="{{ Vite::asset('resources/img/dc-logo-bg.png')}}" alt="dc_logo_bg">
                     </figure>
                 </div>
@@ -62,11 +62,11 @@
     </section>
     <!-- footer-bottom -->
     <section id="footer-bottom">
-        <div class="container">
+        <div class="container h-100">
             <!-- footer-navbar -->
-            <nav class="footer-nav">
+            <nav class="d-flex align-items-center justify-content-between h-100">
                 <a href="#">SIGN-UP NOW!</a>
-                <ul>
+                <ul class="m-0 p-0">
                     <li>
                         <a href="#">FOLLOW US</a>
                     </li>

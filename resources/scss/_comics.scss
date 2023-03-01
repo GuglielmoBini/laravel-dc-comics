@@ -3,36 +3,38 @@
     min-height: 300px;
     color: white;
     background-color: $almostblack;
+    position: relative;
 
-    h3 {
+    h4 {
         padding: 15px;
         background-color: $darkblue;
         text-transform: uppercase;
         display: inline-block;
+        position: relative;
+        bottom: 60px;
     }
 
     .card-container {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: 20px;
 
         .comic-card {
             flex-basis: calc(100% / 6);
             padding: 15px;
-        }
 
-        figure img {
-            display: block;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            object-position: top;
-        }
+            figure img {
+                display: block;
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                object-position: top;
+            }
 
-        figcaption {
-            margin-top: 15px;
-            text-transform: uppercase;
+            figcaption {
+                margin-top: 15px;
+                text-transform: uppercase;
+            }
         }
     }
 }

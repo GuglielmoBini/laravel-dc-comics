@@ -5,6 +5,9 @@
 <section id="comics">
     <div class="container">
         <h4>Current Series</h4>
+        @if (session('delete'))
+            <div class="alert alert-success text-center p-4 fs-2">{{ session('delete') }}</div>
+        @endif
         <div class="card-container row-cols-6">
             @foreach($comics as $comic)
             <div class="comic-card text-center">

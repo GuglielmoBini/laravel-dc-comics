@@ -27,9 +27,15 @@
                 <li><strong>On Sale Date: </strong>{{ $comic->sale_date }}</li>
             </ul>
         </ul>
-
-        <a class="btn btn-primary" href="{{ route('comics.index') }}">Back</a>
-        <a class="btn btn-warning ms-2" href="{{ route('comics.edit', $comic->id) }}">Modify</a>
+        <div class="d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary" href="{{ route('comics.index') }}">Back</a>
+            <a class="btn btn-warning ms-3" href="{{ route('comics.edit', $comic->id) }}">Modify</a>
+            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger ms-3">Delete</button>
+            </form>
+        </div>
     </div>
 </section>
 @endsection

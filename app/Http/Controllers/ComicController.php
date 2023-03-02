@@ -21,7 +21,8 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('comics.create');
+        $comic = new Comic();
+        return view('comics.create', compact('comic'));
     }
 
     /**
@@ -29,19 +30,19 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+
+        $data = $request->all();
         $request->validate([
             'title' => 'required|string',
-            'decription' => 'nullable|string',
+            'description' => 'nullable|string',
             'thumb' => 'nullable|url',
             'price' => 'required|numeric|min:0|max:1000',
             'series' => 'required|string',
             'sale_date' => 'required|string',
             'type' => 'required|string',
-            'artists' => 'nullable|text',
-            'writers' => 'nullable|text',
+            'artists' => 'required|string',
+            'writers' => 'required|string',
         ]);
-
-        $data = $request->all();
         $new_comic = new Comic();
         $new_comic->fill($data);
         $new_comic->save();
@@ -61,17 +62,31 @@ class ComicController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $data = $request->all();
+        $request->validate([
+            'title' => 'required|string',
+            'description' => 'nullable|string',
+            'thumb' => 'nullable|url',
+            'price' => 'required|numeric|min:0|max:1000',
+            'series' => 'required|string',
+            'sale_date' => 'required|string',
+            'type' => 'required|string',
+            'artists' => 'required|string',
+            'writers' => 'required|string',
+        ]);
+        $comic->fill($data);
+        $comic->save();
+        return to_route('comics.show', $comic->id);
     }
 
     /**

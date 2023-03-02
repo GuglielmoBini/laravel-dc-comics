@@ -28,7 +28,8 @@
             </ul>
         </ul>
 
-        <a class="btn-blue" href="{{ route('comics.index') }}">Back</a>
+        <a class="btn btn-primary" href="{{ route('comics.index') }}">Back</a>
+        <a class="btn btn-warning ms-2" href="{{ route('comics.edit', $comic->id) }}">Modify</a>
     </div>
 </section>
 @endsection

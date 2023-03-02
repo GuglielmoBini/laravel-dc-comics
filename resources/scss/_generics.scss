@@ -10,11 +10,6 @@ body {
     justify-content: space-between;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 ul {
     list-style-type: none;
 }
@@ -22,4 +17,5 @@ ul {
 a {
     text-decoration: none;
     color: black;
+    display: block;
 }

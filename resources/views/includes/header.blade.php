@@ -15,7 +15,7 @@
     <div class="container">        
         <nav class="navbar d-flex justify-content-between align-items-center">
             <figure class="m-0">
-                <a href="{{ url('/') }}"><img src="{{ Vite::asset('resources/img/dc-logo.png')}}" alt="dc_logo"></a>
+                <a href="{{ url('/') }}"><img class="img-fluid" src="{{ Vite::asset('resources/img/dc-logo.png')}}" alt="dc_logo"></a>
             </figure>
             <ul class="d-flex m-0">
                 @foreach ($links as $link)                    

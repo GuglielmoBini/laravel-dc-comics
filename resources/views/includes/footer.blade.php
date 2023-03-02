@@ -54,7 +54,7 @@
                 <!-- logo big -->
                 <div class="col-5">
                     <figure class="m-0">
-                        <img src="{{ Vite::asset('resources/img/dc-logo-bg.png')}}" alt="dc_logo_bg">
+                        <img class="img-fluid" src="{{ Vite::asset('resources/img/dc-logo-bg.png')}}" alt="dc_logo_bg">
                     </figure>
                 </div>
             </div>
